@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<meta charset="utf-8">
+<title>HTML test: ruby - implied end</title>
+<link rel="author" title="W3C" href="https://www.w3.org/">
+<link rel="mismatch" href="ruby-implied-end.html">
+<link rel="help" href="http://w3c.github.io/html/syntax.html#the-in-body-insertion-mode"/>
+
+<style>
+ruby { background-color: #EEE; }
+pre { background-color: #EdE; }
+</style>
+
+<ul>
+<li><p><ruby><rb>小白菜</rb><rt>xiaobaicai</rt><rp>xiaobaicai</rp></ruby></p>
+	<pre>ruby rb /rb rt /rt ruby</pre>
+</li>
+<li><p><ruby><rb>小白菜<rt>xiaobaicai</rt><rp>xiaobaicai</ruby></p>
+	<pre>ruby rb  rt /rt ruby</pre>
+</li>
+<li><p><ruby><rb>小白菜<rt>xiaobaicai</ruby></p>
+	<pre>ruby rb rt  ruby</pre>
+</li>
+<li><p><ruby><rb>小白菜</rb><rt>XiaoBaiCai</rt><rtc><rt>xiaobaicai</rt></rtc></ruby></p>
+	<pre>ruby rb /rb rt /rt rtc rt /rt /rtc ruby</pre>
+</li>
+<li><p><ruby><rb>小白菜</rb><rt>XiaoBaiCai</rt><rtc><rt>xiaobaicai<rtc></ruby></p>
+	<pre>ruby rb /rb rt /rt rtc rt /rtc ruby</pre>
+</li>
+<li><p><ruby><rb>小白菜</rb><rt>XiaoBaiCai</rt><rtc><rt>xiaobaicai</ruby></p>
+	<pre>ruby rb /rb rt /rt rtc rt ruby</pre>
+</li>
+<li><p><ruby><rbc><rb>小白菜</rb></rbc><rt>xiaobaicai</rt></ruby></p>
+	<pre>ruby rbc rb /rb /rbc rt /rt ruby</pre>
+</li>
+<li><p><ruby><rbc><rb>小白菜</rbc><rt>xiaobaicai</rt></ruby></p>
+	<pre>ruby rbc rb /rbc rt /rt ruby</pre>
+</li>
+<li><p><ruby><rbc><rb>小白菜<rt>xiaobaicai</ruby></p>
+	<pre>ruby rbc rb rt ruby</pre>
+</li>
+</ul>
+
+<ruby>
+  ♥<rp>: </rp><rt>Heart</rt><rp>, </rp><rtc><rt lang="fr">Cœur</rt></rtc><rp>.</rp>
+  ☘<rp>: </rp><rt>Shamrock</rt><rp>, </rp><rtc><rt lang="fr">Trèfle</rtc><rp>.</rp>
+  ✶<rp>: </rp><rt>Star</rt><rp>, </rp><rtc><rt lang="fr">Étoile</rtc><rp>.
+</ruby>
+
